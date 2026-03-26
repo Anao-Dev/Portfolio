@@ -1,0 +1,270 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+/* Matrix Theme (Default) */
+:root,
+[data-theme="matrix"] {
+  --background: oklch(0.08 0.02 140);
+  --foreground: oklch(0.85 0.2 140);
+  --card: oklch(0.1 0.02 140);
+  --card-foreground: oklch(0.85 0.2 140);
+  --popover: oklch(0.12 0.03 140);
+  --popover-foreground: oklch(0.85 0.2 140);
+  --primary: oklch(0.7 0.25 140);
+  --primary-foreground: oklch(0.1 0.02 140);
+  --secondary: oklch(0.15 0.03 140);
+  --secondary-foreground: oklch(0.75 0.2 140);
+  --muted: oklch(0.2 0.04 140);
+  --muted-foreground: oklch(0.55 0.12 140);
+  --accent: oklch(0.6 0.2 140);
+  --accent-foreground: oklch(0.1 0.02 140);
+  --destructive: oklch(0.5 0.2 25);
+  --destructive-foreground: oklch(0.95 0 0);
+  --border: oklch(0.3 0.08 140);
+  --input: oklch(0.15 0.03 140);
+  --ring: oklch(0.7 0.25 140);
+  --radius: 0.5rem;
+
+  /* Terminal specific */
+  --terminal-bg: #050505;
+  --terminal-glow: rgba(0, 255, 65, 0.15);
+  --cursor-color: oklch(0.7 0.25 140);
+  --scanline-color: rgba(0, 255, 65, 0.03);
+}
+
+/* Dracula Theme */
+[data-theme="dracula"] {
+  --background: oklch(0.15 0.02 280);
+  --foreground: oklch(0.9 0.05 320);
+  --card: oklch(0.18 0.03 280);
+  --card-foreground: oklch(0.9 0.05 320);
+  --popover: oklch(0.2 0.03 280);
+  --popover-foreground: oklch(0.9 0.05 320);
+  --primary: oklch(0.7 0.2 320);
+  --primary-foreground: oklch(0.15 0.02 280);
+  --secondary: oklch(0.25 0.04 280);
+  --secondary-foreground: oklch(0.85 0.15 320);
+  --muted: oklch(0.25 0.04 280);
+  --muted-foreground: oklch(0.6 0.1 280);
+  --accent: oklch(0.65 0.25 280);
+  --accent-foreground: oklch(0.95 0 0);
+  --border: oklch(0.35 0.06 280);
+  --input: oklch(0.2 0.03 280);
+  --ring: oklch(0.7 0.2 320);
+
+  --terminal-bg: #1a1a2e;
+  --terminal-glow: rgba(189, 147, 249, 0.15);
+  --cursor-color: oklch(0.7 0.2 320);
+  --scanline-color: rgba(189, 147, 249, 0.03);
+}
+
+/* Ubuntu Theme */
+[data-theme="ubuntu"] {
+  --background: oklch(0.2 0.03 30);
+  --foreground: oklch(0.95 0.02 60);
+  --card: oklch(0.22 0.04 30);
+  --card-foreground: oklch(0.95 0.02 60);
+  --popover: oklch(0.25 0.04 30);
+  --popover-foreground: oklch(0.95 0.02 60);
+  --primary: oklch(0.65 0.2 30);
+  --primary-foreground: oklch(0.1 0.02 30);
+  --secondary: oklch(0.3 0.05 280);
+  --secondary-foreground: oklch(0.9 0.05 60);
+  --muted: oklch(0.3 0.04 30);
+  --muted-foreground: oklch(0.6 0.08 30);
+  --accent: oklch(0.55 0.15 280);
+  --accent-foreground: oklch(0.95 0 0);
+  --border: oklch(0.4 0.08 30);
+  --input: oklch(0.25 0.04 30);
+  --ring: oklch(0.65 0.2 30);
+
+  --terminal-bg: #2d0922;
+  --terminal-glow: rgba(233, 84, 32, 0.15);
+  --cursor-color: oklch(0.65 0.2 30);
+  --scanline-color: rgba(233, 84, 32, 0.03);
+}
+
+/* Retro Amber Theme */
+[data-theme="retro"] {
+  --background: oklch(0.1 0.02 60);
+  --foreground: oklch(0.85 0.18 70);
+  --card: oklch(0.12 0.02 60);
+  --card-foreground: oklch(0.85 0.18 70);
+  --popover: oklch(0.14 0.03 60);
+  --popover-foreground: oklch(0.85 0.18 70);
+  --primary: oklch(0.75 0.2 70);
+  --primary-foreground: oklch(0.1 0.02 60);
+  --secondary: oklch(0.18 0.03 60);
+  --secondary-foreground: oklch(0.8 0.15 70);
+  --muted: oklch(0.22 0.04 60);
+  --muted-foreground: oklch(0.55 0.1 70);
+  --accent: oklch(0.7 0.18 70);
+  --accent-foreground: oklch(0.1 0.02 60);
+  --border: oklch(0.35 0.1 70);
+  --input: oklch(0.15 0.03 60);
+  --ring: oklch(0.75 0.2 70);
+
+  --terminal-bg: #0a0800;
+  --terminal-glow: rgba(255, 176, 0, 0.15);
+  --cursor-color: oklch(0.75 0.2 70);
+  --scanline-color: rgba(255, 176, 0, 0.03);
+}
+
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback', system-ui, sans-serif;
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback', 'Fira Code', 'Cascadia Code', monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* CRT Scanline Effect */
+.crt-scanlines {
+  position: relative;
+  overflow: hidden;
+}
+
+.crt-scanlines::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    var(--scanline-color) 0px,
+    var(--scanline-color) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: 10;
+}
+
+.crt-scanlines::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  pointer-events: none;
+  z-index: 9;
+}
+
+/* CRT Flicker Animation */
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  92% { opacity: 1; }
+  93% { opacity: 0.95; }
+  94% { opacity: 1; }
+  97% { opacity: 0.98; }
+  98% { opacity: 1; }
+}
+
+.crt-flicker {
+  animation: flicker 8s infinite;
+}
+
+/* Blinking Cursor */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* Terminal Text Glow */
+.terminal-glow {
+  text-shadow: 
+    0 0 2px var(--terminal-glow),
+    0 0 4px var(--terminal-glow),
+    0 0 8px var(--terminal-glow);
+}
+
+/* Boot sequence animation */
+@keyframes typeIn {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.type-in {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typeIn 0.5s steps(40) forwards;
+}
+
+/* Glassmorphism modal */
+.glass-modal {
+  background: rgba(20, 20, 20, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom scrollbar for terminal */
+.terminal-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.terminal-scroll::-webkit-scrollbar-track {
+  background: var(--terminal-bg);
+}
+
+.terminal-scroll::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+.terminal-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* ASCII Art styling */
+.ascii-art {
+  line-height: 1.1;
+  letter-spacing: 0.05em;
+}
+
+/* Progress bar animation */
+@keyframes progress {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+.progress-animate {
+  animation: progress 1s ease-out forwards;
+}
