@@ -7,7 +7,7 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'DEV-OS | Developer Portfolio',
+  title: 'PORTFOLIO',
   description: 'A Linux terminal themed developer portfolio with retro CRT aesthetics',
   generator: 'v0.app',
   icons: {
