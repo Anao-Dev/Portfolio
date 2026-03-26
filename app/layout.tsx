@@ -9,7 +9,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: 'PORTFOLIO',
   description: 'A Linux terminal themed developer portfolio with retro CRT aesthetics',
-  generator: 'v0.app',
+  generator: 'Gabriel Porto',
   icons: {
     icon: [
       {
@@ -20,12 +20,9 @@ export const metadata: Metadata = {
         url: '/icon-dark-32x32.png',
         media: '(prefers-color-scheme: dark)',
       },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
+
     ],
-    apple: '/apple-icon.png',
+    apple: '/icon-dark-32x32.png',
   },
 }
 
